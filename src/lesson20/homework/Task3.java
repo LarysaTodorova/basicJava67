@@ -1,5 +1,7 @@
 package lesson20.homework;
 
+import java.util.Scanner;
+
 public class Task3 {
     public static void main(String[] args) {
 /*
@@ -16,5 +18,32 @@ public class Task3 {
 (double distance, double fuelConsumption, double fuelPrice, double totalCost),
 который будет: Выводить отчёт о стоимости поездки, используя конкатенацию строк.
  */
+
+        getTripInfo();
+
+    }
+
+    public static void getTripInfo() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please, enter the distance to the destination: ");
+        double distance = scanner.nextDouble();
+        System.out.println("Please, enter fuel consumption per 100 km: ");
+        double fuelConsumption = scanner.nextDouble();
+        System.out.println("Please, enter fuel price per liter: ");
+        double fuelPrice = scanner.nextDouble();
+        double totalCost = calculateFuelCost(distance, fuelConsumption, fuelPrice);
+        generateTripReport(distance, fuelConsumption, fuelPrice, totalCost);
+
+    }
+
+    public static double calculateFuelCost(double distance, double fuelConsumption, double fuelPrice) {
+        double totalFuelConsumption = (distance / 100) * fuelConsumption;
+        return totalFuelConsumption * fuelPrice;
+    }
+
+    public static void generateTripReport
+            (double distance, double fuelConsumption, double fuelPrice, double totalCost) {
+        System.out.println("Trip cost report: distance " + distance + " , fuelConsumption " + fuelConsumption
+                + " , fuelPrice " + fuelPrice + " , totalCost " + totalCost);
     }
 }
