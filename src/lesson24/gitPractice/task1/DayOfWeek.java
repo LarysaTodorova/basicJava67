@@ -1,4 +1,4 @@
-package lesson24.gitPractice;
+package lesson24.gitPractice.task1;
 
 public enum DayOfWeek {
     SUNDAY("Воскресенье", 7),
