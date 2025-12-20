@@ -1,4 +1,4 @@
-package lesson24.classwork.task1;
+package lesson24Enum.classwork.task1;
 
 public class Toy {
 

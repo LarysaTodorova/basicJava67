@@ -1,4 +1,4 @@
-package lesson24.classwork.task4;
+package lesson24Enum.classwork.task4;
 
 public class SolarSystemInfo {
     public static void main(String[] args) {

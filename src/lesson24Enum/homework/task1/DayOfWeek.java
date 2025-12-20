@@ -1,4 +1,4 @@
-package lesson24.homework.task1;
+package lesson24Enum.homework.task1;
 
 public enum DayOfWeek {
     SUNDAY("Воскресенье"),

@@ -1,4 +1,4 @@
-package lesson24.classwork.task3;
+package lesson24Enum.classwork.task3;
 
 public enum Month {
 

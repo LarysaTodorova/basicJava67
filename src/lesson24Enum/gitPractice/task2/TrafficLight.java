@@ -1,4 +1,4 @@
-package lesson24.gitPractice.task2;
+package lesson24Enum.gitPractice.task2;
 
 public enum TrafficLight {
 
