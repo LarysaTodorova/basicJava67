@@ -1,4 +1,4 @@
-package lesson28.classwork.task4;
+package lesson28Iterator.classwork.task4;
 
 import java.util.Enumeration;
 import java.util.Vector;

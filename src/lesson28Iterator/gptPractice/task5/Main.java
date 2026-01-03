@@ -1,8 +1,4 @@
-package lesson28.gptPractice.task5;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+package lesson28Iterator.gptPractice.task5;
 
 public class Main {
     public static void main(String[] args) {

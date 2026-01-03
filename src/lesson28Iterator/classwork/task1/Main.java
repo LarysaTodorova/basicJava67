@@ -1,4 +1,4 @@
-package lesson28.classwork.task1;
+package lesson28Iterator.classwork.task1;
 
 import java.util.ArrayList;
 import java.util.List;

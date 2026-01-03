@@ -1,4 +1,4 @@
-package lesson28.gptPractice.task2;
+package lesson28Iterator.gptPractice.task2;
 
 import java.util.ArrayList;
 import java.util.List;
