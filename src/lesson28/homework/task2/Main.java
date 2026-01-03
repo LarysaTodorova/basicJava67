@@ -22,18 +22,24 @@ public class Main {
 
         ListIterator<Integer> iterator = numbers.listIterator();
 
+        boolean found = false;
+
         while (iterator.hasNext()) {
             Integer number = iterator.next();
             if (number > 10) {
-                iterator.previous();
-
-                while (iterator.hasPrevious()) {
-                    number = iterator.previous();
-                    if (number % 2 == 0) {
-                        iterator.remove();
-                    }
-                }
+                found = true;
                 break;
+            }
+        }
+
+        if (found) {
+            iterator.previous();
+
+            while (iterator.hasPrevious()) {
+                Integer number = iterator.previous();
+                if (number % 2 == 0) {
+                    iterator.remove();
+                }
             }
         }
 
