@@ -1,4 +1,4 @@
-package lesson30ComparingObjects.homework.task2.task1;
+package lesson30ComparingObjects.homework.task2;
 
 import java.util.Objects;
 
