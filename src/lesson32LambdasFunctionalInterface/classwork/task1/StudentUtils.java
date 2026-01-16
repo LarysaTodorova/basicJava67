@@ -1,4 +1,4 @@
-package lesson32.classwork.task1;
+package lesson32LambdasFunctionalInterface.classwork.task1;
 
 import java.util.List;
 

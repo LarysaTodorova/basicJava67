@@ -1,9 +1,9 @@
-package lesson32.classwork.task1;
+package lesson32LambdasFunctionalInterface.classwork.task1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static lesson32.classwork.task1.StudentUtils.printFilterStudents;
+import static lesson32LambdasFunctionalInterface.classwork.task1.StudentUtils.printFilterStudents;
 
 public class Main {
     public static void main(String[] args) {
