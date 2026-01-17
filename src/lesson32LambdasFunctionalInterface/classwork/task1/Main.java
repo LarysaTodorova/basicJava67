@@ -54,5 +54,8 @@ public class Main {
         System.out.println("Students with name starts with 'A': ");
         printFilterStudents(students, x -> x.getName().charAt(0) == 'A');
 
+        System.out.println("Students with name starts with 'M': ");
+        printFilterStudents(students, x-> x.getName().startsWith("M"));
+
     }
 }
