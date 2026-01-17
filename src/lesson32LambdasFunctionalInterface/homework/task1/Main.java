@@ -37,9 +37,9 @@ public class Main {
         System.out.println();
 
         System.out.println("Filtered cats by color: ");
-        printFilteredCats(cats, new FilterCatByColor());
+        printFilteredCats(cats, new FilterCatByColor("Grey"));
 
-        System.out.println("Filtered cats by color and weight: ");
+        System.out.println("Filtered cats by color and age: ");
         printFilteredCats(cats, new Filter() {
             @Override
             public boolean test(Cat cat) {
