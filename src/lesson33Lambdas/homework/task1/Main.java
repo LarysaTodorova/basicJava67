@@ -19,6 +19,7 @@ public class Main {
         String value = "5 Black 4.23";
 
         System.out.println("First way:");
+
         Function<String, Cat> fromStringToCat = x -> {
             String[] splitedWords = x.split(" ");
             int age = Integer.parseInt(splitedWords[0]);
