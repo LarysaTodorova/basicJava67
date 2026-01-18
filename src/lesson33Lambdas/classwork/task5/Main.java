@@ -11,6 +11,5 @@ public class Main {
         String result = function.apply(value);
         System.out.println("Result: " + result);
 
-
     }
 }
