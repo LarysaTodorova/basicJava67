@@ -18,34 +18,37 @@ public class Main {
 
         String value = "5 Black 4.23";
 
-//        Function<String, Cat> fromStringToCat = x -> {
-//            String[] splitedWords = x.split(" ");
-//            int age = Integer.parseInt(splitedWords[0]);
-//            String color = splitedWords[1];
-//            double weight = Double.parseDouble(splitedWords[2]);
-//            return new Cat(color, age, weight);
-//        };
-//
-//        Cat cat = fromStringToCat.apply(value);
-//        System.out.println("Cats info:");
-//        System.out.println(cat);
-
-        System.out.println("Results of the work of intermediate functions:");
-
-        Function<String[], Integer> getAge = x -> Integer.parseInt(x[0]);
-        Function<String[], String> getColor = x -> x[1];
-        Function<String[], Double> getWeight = x -> Double.parseDouble(x[2]);
-
+        System.out.println("First way:");
         Function<String, Cat> fromStringToCat = x -> {
-            String[] words = x.split(" ");
-            return new Cat(
-                    getColor.apply(words),
-                    getAge.apply(words),
-                    getWeight.apply(words)
-            );
+            String[] splitedWords = x.split(" ");
+            int age = Integer.parseInt(splitedWords[0]);
+            String color = splitedWords[1];
+            double weight = Double.parseDouble(splitedWords[2]);
+            return new Cat(color, age, weight);
         };
 
-        System.out.println("Cats info: ");
-        System.out.println(fromStringToCat.apply(value));
+        Cat cat = fromStringToCat.apply(value);
+        System.out.println("Cats info:");
+        System.out.println(cat);
+        System.out.println();
+
+//        System.out.println("Second way:");
+//        System.out.println("Results of the work of intermediate functions:");
+//
+//        Function<String[], Integer> getAge = x -> Integer.parseInt(x[0]);
+//        Function<String[], String> getColor = x -> x[1];
+//        Function<String[], Double> getWeight = x -> Double.parseDouble(x[2]);
+//
+//        Function<String, Cat> fromStringToCat2 = x -> {
+//            String[] words = x.split(" ");
+//            return new Cat(
+//                    getColor.apply(words),
+//                    getAge.apply(words),
+//                    getWeight.apply(words)
+//            );
+//        };
+//
+//        System.out.println("Cats info: ");
+//        System.out.println(fromStringToCat2.apply(value));
     }
 }
