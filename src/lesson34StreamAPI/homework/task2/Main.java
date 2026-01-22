@@ -1,8 +1,10 @@
 package lesson34StreamAPI.homework.task2;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class Main {
 Задание должно быть решено при помощи одного стрима.
          */
 
-        Set<Customer> customers = new HashSet<>(List.of(
+        List<Customer> customers = new ArrayList<>(List.of(
                 new Customer("Anna", 67, 3),
                 new Customer("Robert", 29, 1),
                 new Customer("Lukas", 33, 5),
@@ -41,8 +43,10 @@ public class Main {
         List<Customer> winners = customers
                 .stream()
                 .filter(x -> x.getAge() >= 65 && x.getNumberOfPurchases() >= 3)
+                .distinct()
                 .limit(2)
-                .peek(System.out::println)
                 .toList();
+
+        winners.forEach(System.out::println);
     }
 }
