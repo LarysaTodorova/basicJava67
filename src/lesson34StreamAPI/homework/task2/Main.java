@@ -1,5 +1,9 @@
 package lesson34StreamAPI.homework.task2;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -13,5 +17,32 @@ public class Main {
 Важное уточнение: одинаковые покупатели два раза к участию в акции не допускаются.
 Задание должно быть решено при помощи одного стрима.
          */
+
+        Set<Customer> customers = new HashSet<>(List.of(
+                new Customer("Anna", 67, 3),
+                new Customer("Robert", 29, 1),
+                new Customer("Lukas", 33, 5),
+                new Customer("Jack", 79, 2),
+                new Customer("Maria", 80, 3),
+                new Customer("Olivia", 65, 5),
+                new Customer("Max", 55, 1),
+                new Customer("Alexa", 40, 2),
+                new Customer("John", 69, 4),
+                new Customer("Frank", 50, 3)
+        ));
+
+        System.out.println("All customers: ");
+        for (Customer customer : customers) {
+            System.out.println(customer);
+        }
+
+        System.out.println();
+
+        List<Customer> winners = customers
+                .stream()
+                .filter(x -> x.getAge() >= 65 && x.getNumberOfPurchases() >= 3)
+                .limit(2)
+                .peek(System.out::println)
+                .toList();
     }
 }
