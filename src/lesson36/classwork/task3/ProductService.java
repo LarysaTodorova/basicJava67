@@ -7,7 +7,14 @@ public class ProductService {
 
     private List<Product> dataBase = new ArrayList<>();
 
-    public void addProduct(Product product) {
+    public void addProduct(Product product) throws ProductNotFoundException {
+
+        if (product.getName().isBlank()) {
+            throw new ProductNotFoundException("Product title must not be empty");
+        }
+        if (product.getPrice() < 0) {
+            throw new ProductNotFoundException("Product price must not be negative");
+        }
         dataBase.add(product);
     }
 

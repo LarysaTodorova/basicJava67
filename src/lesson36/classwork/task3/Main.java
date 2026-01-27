@@ -2,12 +2,26 @@ package lesson36.classwork.task3;
 
 public class Main {
     public static void main(String[] args) {
+        /*
+        Доработайте сервис продуктов таким образом, чтобы при попытке сохранения продукта с пустым наименованием
+        либо некорректной (отрицательной) ценой выбрасывались соответствующие пользовательские проверяемые исключения
+        с информативными поясняющими сообщениями внутри.
+         */
 
         ProductService service = new ProductService();
 
-        service.addProduct(new Product("Banana", 5));
-        service.addProduct(new Product("Apple", 3.4));
-        service.addProduct(new Product("Lemon", 6.7));
+        try {
+            service.addProduct(new Product("Banana", 5));
+            service.addProduct(new Product("Apple", 3.4));
+            service.addProduct(new Product("Lemon", 6.7));
+            service.addProduct(new Product("", 6.7));
+            service.addProduct(new Product("Peach", -6.7));
+
+        } catch (ProductNotFoundException e) {
+            System.out.println("Error! " + e.getMessage());
+
+        }
+
 
         try {
             Product product = service.findByTitle("Lemon");

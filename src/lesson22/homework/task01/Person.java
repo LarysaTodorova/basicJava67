@@ -36,10 +36,16 @@ public class Person {
         return email;
     }
 
+    //    public void setEmail(String email) {
+//        if (email == null || email.isEmpty()) {
+//            System.out.println("Email is empty");
+//            return;
+//        }
+//        this.email = email;
+//    }
     public void setEmail(String email) {
         if (email == null || email.isEmpty()) {
-            System.out.println("Email is empty");
-            return;
+            throw new IllegalArgumentException("Email cannot be null or empty");
         }
         this.email = email;
     }
