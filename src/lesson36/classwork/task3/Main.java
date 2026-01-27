@@ -17,7 +17,7 @@ public class Main {
             service.addProduct(new Product("", 6.7));
             service.addProduct(new Product("Peach", -6.7));
 
-        } catch (ProductNotFoundException e) {
+        } catch (EmptyProductTitleException | NegativeProductPriceException e) {
             System.out.println("Error! " + e.getMessage());
 
         }
