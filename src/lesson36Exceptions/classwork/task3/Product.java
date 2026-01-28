@@ -1,4 +1,4 @@
-package lesson36.classwork.task3;
+package lesson36Exceptions.classwork.task3;
 
 import java.util.Objects;
 

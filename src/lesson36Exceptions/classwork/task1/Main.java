@@ -1,4 +1,4 @@
-package lesson36.classwork.task1;
+package lesson36Exceptions.classwork.task1;
 
 import java.util.Scanner;
 

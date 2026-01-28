@@ -1,4 +1,4 @@
-package lesson36.homework.task1;
+package lesson36Exceptions.homework.task1;
 
 import lesson22.homework.task01.Person;
 
