@@ -24,14 +24,19 @@ Main — только try/catch
         UserService userService = new UserService();
 
         try {
-            userService.addUser(new User(1, "orh@hfj.mkh", 26));
-            userService.addUser(new User(2, "qerny@kdfj.cnm", 18));
-            userService.addUser(new User(3, "hgjt@dlkgl.ghj", 57));
-            userService.addUser(new User(4, "nvmirolsc@gkl.kglh", 60));
-            userService.addUser(new User(5, "optmc@jgu.mkh", 15));
+            userService.addUser(new User("khkhkjj@jgjg.nmn", 46));
+            userService.addUser(new User("ooojj@jgjg.nmn", 25));
+            userService.addUser(new User("qqqeejj@jgjg.nmn", 18));
+            userService.addUser(new User("orh@hfj.mkh", 26));
+            userService.addUser(new User("qerny@kdfj.cnm", 18));
+            userService.addUser(new User("hgjt@dlkgl.ghj", 57));
+            userService.addUser(new User("nvmirolsc@gkl.kglh", 60));
+            userService.addUser(new User("optmc@jgu.mkh", 15));
         } catch (EmptyEmailException | InvalidAgeException e) {
             System.out.println("Error! " + e.getMessage());
         }
+
+        userService.printUsers();
 
         try {
             User user = userService.findUserByEmail("optmc@jgu.mkh");

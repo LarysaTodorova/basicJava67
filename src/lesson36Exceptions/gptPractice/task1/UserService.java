@@ -6,7 +6,9 @@ import java.util.Optional;
 
 public class UserService {
 
-    public final List<User> users = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
+
+    private long counter = 0;
 
     public void addUser(User user) throws EmptyEmailException, InvalidAgeException {
         if (user.getEmail() == null || user.getEmail().isBlank()) {
@@ -15,13 +17,14 @@ public class UserService {
         if (user.getAge() < 0) {
             throw new InvalidAgeException("User's age must not be less than 0");
         }
+        user.setId(++counter);
         users.add(user);
     }
 
     public User findUserByEmail(String email) throws UserNotFoundException {
 
         if (email == null || email.isBlank()) {
-            throw new UserNotFoundException("User's email must not be empty");
+            throw new IllegalArgumentException("User's email must not be empty");
         }
 
         for (User user : users) {
@@ -33,9 +36,16 @@ public class UserService {
     }
 
     public Optional<User> findOptionalUserByEmail(String email) {
+        if (email == null || email.isBlank()) {
+            return Optional.empty();
+        }
         return users
                 .stream()
-                .filter(x -> x.getEmail().equals(email))
+                .filter(x -> email.equals(x.getEmail()))
                 .findFirst();
+    }
+
+    public void printUsers() {
+        users.forEach(System.out::println);
     }
 }

@@ -8,14 +8,17 @@ public class User {
     private String email;
     private int age;
 
-    public User(long id, String email, int age) {
-        this.id = id;
+    public User(String email, int age) {
         this.email = email;
         this.age = age;
     }
 
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getEmail() {
