@@ -37,10 +37,12 @@ Main — только try/catch
         }
 
         userService.printUsers();
+        System.out.println();
 
         try {
             User user = userService.findUserByEmail("optmc@jgu.mkh");
             System.out.println("User with email " + user.getEmail() + " is found!");
+            System.out.println(user);
 
             System.out.println("User's age is: " + user.getAge());
         } catch (UserNotFoundException e) {
