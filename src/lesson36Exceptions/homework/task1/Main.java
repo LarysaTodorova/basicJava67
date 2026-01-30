@@ -1,6 +1,6 @@
 package lesson36Exceptions.homework.task1;
 
-import lesson22.homework.task01.Person;
+import lesson22Encapsulation.homework.task01.Person;
 
 public class Main {
     public static void main(String[] args) {
