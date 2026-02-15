@@ -40,7 +40,6 @@ public class Main {
             secondIn.read(thirdPart);
             System.out.print(new String(thirdPart));
 
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
