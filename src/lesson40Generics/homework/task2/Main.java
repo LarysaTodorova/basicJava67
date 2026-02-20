@@ -17,5 +17,20 @@ public class Main {
 * соответственно, в текущей коробке фруктов не остается, а в другую перекидываются объекты, которые были в этой коробке
          */
 
+        Box<Apple> applesBox = new Box<>();
+        applesBox.add(new Apple(1.2));
+        applesBox.add(new Apple(0.9));
+        applesBox.add(new Apple(1.0));
+        applesBox.add(new Apple(0.8));
+        double appleWeight = applesBox.getWeight();
+        System.out.println("Apple Weight: " + appleWeight);
+
+        Box<Orange> orangeBox = new Box<>();
+        orangeBox.add(new Orange(1.3));
+        orangeBox.add(new Orange(1.2));
+        orangeBox.add(new Orange(1.5));
+        orangeBox.add(new Orange(1.1));
+        double orangeWeight = orangeBox.getWeight();
+        System.out.println("Orange Weight: " + orangeWeight);
     }
 }
