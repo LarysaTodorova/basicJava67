@@ -11,6 +11,4 @@ public abstract class Fruit {
     public double getWeight() {
         return weight;
     }
-
-    public abstract void sprinkleFruits();
 }

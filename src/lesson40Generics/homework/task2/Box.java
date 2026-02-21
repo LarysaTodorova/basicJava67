@@ -21,6 +21,18 @@ public class Box<T extends Fruit> {
         return sum;
     }
 
+    public List<T> sprinkleFruits(List<T> fruitsForSprinkle) {
+        List<T> sprinkledFruits = new ArrayList<>();
+        for (T fruit : fruitsForSprinkle) {
+            if (fruits.contains(fruit)) {
+                sprinkledFruits.add(fruit);
+            } else {
+                System.out.println("This box can contains only " + fruit);
+            }
+        }
+        return sprinkledFruits;
+    }
+
 }
 
 

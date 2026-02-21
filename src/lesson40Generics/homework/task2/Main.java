@@ -1,5 +1,7 @@
 package lesson40Generics.homework.task2;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -32,5 +34,7 @@ public class Main {
         orangeBox.add(new Orange(1.1));
         double orangeWeight = orangeBox.getWeight();
         System.out.println("Orange Weight: " + orangeWeight);
+
+        //System.out.println(applesBox.sprinkleFruits((List<Apple>) applesBox));
     }
 }
