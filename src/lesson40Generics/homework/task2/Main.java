@@ -20,21 +20,26 @@ public class Main {
          */
 
         Box<Apple> applesBox = new Box<>();
-        applesBox.add(new Apple(1.2));
-        applesBox.add(new Apple(0.9));
-        applesBox.add(new Apple(1.0));
-        applesBox.add(new Apple(0.8));
+        applesBox.add(new Apple());
+        applesBox.add(new Apple());
+        applesBox.add(new Apple());
+        applesBox.add(new Apple());
         double appleWeight = applesBox.getWeight();
         System.out.println("Apple Weight: " + appleWeight);
 
         Box<Orange> orangeBox = new Box<>();
-        orangeBox.add(new Orange(1.3));
-        orangeBox.add(new Orange(1.2));
-        orangeBox.add(new Orange(1.5));
-        orangeBox.add(new Orange(1.1));
+        orangeBox.add(new Orange());
+        orangeBox.add(new Orange());
+        orangeBox.add(new Orange());
+        orangeBox.add(new Orange());
         double orangeWeight = orangeBox.getWeight();
         System.out.println("Orange Weight: " + orangeWeight);
 
-        //System.out.println(applesBox.sprinkleFruits((List<Apple>) applesBox));
+        Box<Orange> sprinkledOrangesBox = new Box<>();
+        orangeBox.sprinkleFruits(sprinkledOrangesBox);
+
+        orangeBox.printData();
+        sprinkledOrangesBox.printData();
+
     }
 }

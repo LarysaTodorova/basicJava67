@@ -2,11 +2,12 @@ package lesson40Generics.homework.task2;
 
 public abstract class Fruit {
 
-    private double weight;
+    private final double weight;
 
-    public Fruit(double weight) {
+    protected Fruit(double weight) {
         this.weight = weight;
     }
+
 
     public double getWeight() {
         return weight;

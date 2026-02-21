@@ -2,7 +2,12 @@ package lesson40Generics.homework.task2;
 
 public class Apple extends Fruit {
 
-    public Apple(double weight) {
-        super(weight);
+    public Apple() {
+        super(1.0);
+    }
+
+    @Override
+    public String toString() {
+        return "Apple";
     }
 }

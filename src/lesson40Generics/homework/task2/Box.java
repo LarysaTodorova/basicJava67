@@ -1,6 +1,7 @@
 package lesson40Generics.homework.task2;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Box<T extends Fruit> {
@@ -11,28 +12,37 @@ public class Box<T extends Fruit> {
         fruits.add(fruit);
     }
 
-    double sum;
-
     public double getWeight() {
+        double sum = 0;
         for (T fruit : fruits) {
-            double weight = fruit.getWeight();
-            sum += weight;
+            sum += fruit.getWeight();
         }
         return sum;
     }
 
-    public List<T> sprinkleFruits(List<T> fruitsForSprinkle) {
-        List<T> sprinkledFruits = new ArrayList<>();
-        for (T fruit : fruitsForSprinkle) {
-            if (fruits.contains(fruit)) {
-                sprinkledFruits.add(fruit);
-            } else {
-                System.out.println("This box can contains only " + fruit);
-            }
+//    public void sprinkleFruits(Box<T> boxForSprinkle) {
+//        boxForSprinkle.fruits.addAll(fruits);
+//        fruits.clear();
+//    }
+
+    public void sprinkleFruits(Box<T> boxForSprinkle) {
+        if (boxForSprinkle == null || boxForSprinkle == this) return;
+
+        Iterator<T> iterator = fruits.iterator();
+        while (iterator.hasNext()) {
+            T fruit = iterator.next();
+            boxForSprinkle.add(fruit);
+            iterator.remove();
         }
-        return sprinkledFruits;
     }
 
+    public void printData() {
+        for (T fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
 }
+
+
 
 
